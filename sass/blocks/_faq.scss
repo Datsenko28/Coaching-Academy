@@ -1,0 +1,95 @@
+.faq {
+  margin: 50px 0 50px;
+
+  // .faq__title
+
+  &__title {
+    color: $accent-color;
+    font-size: 42px;
+    font-weight: 500;
+    line-height: 63px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  // .faq__content
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  // .faq__according-container
+
+  &__according-container {
+  }
+
+  // .faq__according-card
+
+  &__according-card {
+    margin-bottom: 20px;
+    padding: 40px;
+    width: 772px;
+    height: 100px;
+    border: 1px solid $accent-color;
+    border-radius: 16px;
+    background: $white-color;
+    overflow: hidden; // Щоб приховати зайвий контент при закритті
+    transition: height 0.3s ease-in-out; // Анімація зміни висоти
+  }
+  &__according-divider {
+    max-width: 612px;
+    border: 1px;
+    height: 1px;
+    background-color: $accent-color;
+    margin: 30px 0;
+  }
+
+  // .faq__acording-btn
+
+  &__acording-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 150%;
+    cursor: pointer;
+    &:hover {
+    }
+
+    &::after {
+      content: url("/assets/img/faq/btn+.svg");
+      padding-left: 142px;
+      transition: transform 0.3s ease; 
+    }
+    &.is-open::after {
+      content: url("/assets/img/faq/btn-.svg");
+    }
+  }
+
+  // .faq__according-content
+
+  &__according-content {
+    color: $gray-color;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+
+    max-height: 0; // Початково контент прихований
+    overflow: hidden; // Ховаємо зайвий текст
+    transition: max-height 0.3s ease; // Плавне відкриття
+  }
+
+  // .faq__form
+
+  &__form {
+  }
+
+  // .faq__form-title
+
+  &__form-title {
+  }
+}

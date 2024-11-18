@@ -1,0 +1,19 @@
+.nav {
+  padding: 18px 0;
+
+  // .nav__row
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.logo {
+  img {
+    width: 48px;
+    height: auto;
+  }
+  
+}
+

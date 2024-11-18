@@ -3,8 +3,6 @@
   margin: 0px;
   border: none;
   box-sizing: border-box;
-  font-size: 18px;
-
   &::before,
   &::after {
     box-sizing: inherit;
@@ -35,8 +33,7 @@ h2,
 h3,
 h4,
 h5,
-h6,
-p {
+h6 {
   font-size: inherit;
   font-weight: inherit;
 }

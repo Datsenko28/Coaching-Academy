@@ -1,5 +1,15 @@
 //Base
+@import "./base/vars";
 @import "./base/reset";
 @import "./base/base";
 
 //Blocks
+@import "./blocks/nav";
+@import "./blocks/navigation-list";
+@import "./blocks/header";
+@import "./blocks/advantags";
+@import "./blocks/about";
+@import "./blocks/courses";
+@import "./blocks/clients";
+@import "./blocks/testimonials";
+@import "./blocks/faq";
