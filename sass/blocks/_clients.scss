@@ -1,6 +1,8 @@
 .clients {
   background-color: $accent-color;
   margin-top: 122px;
+  margin-bottom: 50px;
+
   // .clients__title
 
   &__title {
@@ -55,7 +57,7 @@
     line-height: 150%;
     text-align: left;
     &:focus {
-      border-color: $white-color-advantags;
+      border: 1px solid $white-color-advantags;
     }
   }
 

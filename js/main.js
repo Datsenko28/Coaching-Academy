@@ -1,5 +1,22 @@
-// slider
+//
 document.addEventListener("DOMContentLoaded", () => {
+  const anchors = document.querySelectorAll('a[href*="#"]');
+
+  for (let anchor of anchors) {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      const blockID = anchor.getAttribute("href").substr(1);
+
+      document.getElementById(blockID).scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    });
+  }
+
+  // slider
+
   const cards = document.querySelectorAll(".testimonials__card");
   const dots = document.querySelectorAll(".slider__dot");
   const nextButton = document.querySelector(".slider__button--next");
@@ -20,6 +37,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // Оновлюємо індикатори
     dots.forEach((dot, index) => {
       dot.classList.toggle("slider__dot--active", index === currentIndex);
+      removeClass(prevButton, "active");
+      removeClass(nextButton, "active");
     });
   }
 
@@ -27,23 +46,29 @@ document.addEventListener("DOMContentLoaded", () => {
   nextButton.addEventListener("click", () => {
     currentIndex = (currentIndex + 1) % cards.length; // Зациклення вперед
     updateSlider();
+    addClass(nextButton, "active");
   });
 
   // Логіка кнопки "Назад"
   prevButton.addEventListener("click", () => {
     currentIndex = (currentIndex - 1 + cards.length) % cards.length; // Зациклення назад
     updateSlider();
+    addClass(prevButton, "active");
   });
+
+  function addClass(element, className) {
+    element.classList.add(className);
+  }
+  function removeClass(element, className) {
+    element.classList.remove(className);
+  }
 
   // Ініціалізація слайдера при завантаженні
   updateSlider();
-});
+  // accordion-1
 
-// accordion-1
-
-document.addEventListener("DOMContentLoaded", () => {
   const accordionButtons = document.querySelectorAll(".faq__acording-btn"); // Вибираємо всі кнопки
-  const cards = document.querySelectorAll(".faq__according-card"); // Вибираємо всі картки
+  const cardsAccordion = document.querySelectorAll(".faq__according-card"); // Вибираємо всі картки
 
   accordionButtons.forEach((button) => {
     button.addEventListener("click", (event) => {
@@ -57,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const isOpen = card.classList.contains("is-open");
 
       // Закриваємо всі картки
-      cards.forEach((otherCard) => {
+      cardsAccordion.forEach((otherCard) => {
         const otherButton = otherCard.querySelector(".faq__acording-btn");
         const otherContent = otherCard.querySelector(".faq__according-content");
 
