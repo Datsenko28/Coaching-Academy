@@ -56,7 +56,9 @@
   }
 
   // .courses__card-right
-
+  a {
+    text-decoration: none;
+  }
   &__card-right {
     display: flex;
     justify-content: space-between;
