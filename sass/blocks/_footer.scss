@@ -1,4 +1,6 @@
 .footer {
+  padding-bottom: 36px;
+
   // .footer__cont
 
   &__cont {
@@ -6,6 +8,12 @@
     justify-content: space-between;
     align-items: center;
   }
+
+  // .footer__logo
+
+  &__logo {
+  }
+
   // .footer__copyright
 
   &__copyright {
@@ -14,7 +22,12 @@
     font-weight: 400;
     line-height: 150%;
     text-align: center;
-  }  
+  }
+
+  // .footer__nav
+
+  &__nav {
+  }
 
   // .footer__nav-list
 
@@ -33,7 +46,6 @@
   // .footer__nav-link
 
   &__nav-link {
-    /* Paragraph/16 medium */
     color: rgb(52, 52, 52);
     font-size: 16px;
     font-weight: 500;

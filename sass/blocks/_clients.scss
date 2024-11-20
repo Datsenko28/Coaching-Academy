@@ -2,6 +2,7 @@
   background-color: $accent-color;
   margin-top: 122px;
   margin-bottom: 50px;
+  padding: 50px 0 50px;
 
   // .clients__title
 
@@ -23,7 +24,6 @@
   }
 }
 .container_clients {
-  margin: 50px 0 50px;
 }
 .text__form {
   display: flex;
@@ -68,7 +68,7 @@
     height: 58px;
     padding: 14px 20px 14px 20px;
     border-radius: 14px;
-    margin: 16px 0 50px;
+    margin: 16px 0 0;
     background-color: $white-color;
     color: $accent-color;
     transition: background-color 0.2s ease-in;
